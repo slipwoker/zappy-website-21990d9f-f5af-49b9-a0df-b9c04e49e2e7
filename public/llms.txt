@@ -1,0 +1,45 @@
+# MB Finance By Maayan Bar Lev — Generative Engine Optimization Map
+
+> MB Finance by Maayan Bar Lev is a high-end boutique accounting service with a deeply personal, feminine, and luxurious brand identity. The brand positions itself not as a traditional accounting firm, but as a provider of financial order, control, and peace of mind — speaking directly to business owners who feel lost in their numbers. The tone is calm, elegant, self-assured, and intimate, written entirely in first-person feminine voice ('I believe', 'I organize', 'I care'). The aesthetic vision is soft yet sharp: 70% feminine warmth and 30% professional precision, evoking the polished, editorial feel of a luxury Instagram brand with a nearly 'fairytale' elegance.
+
+---
+
+## Pages
+
+### בית
+https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app
+MB Finance by Maayan Bar Lev is a high-end boutique accounting service with a deeply personal, feminine, and luxurious brand identity. The brand positions itsel
+
+## Legal & Policy
+
+### Privacy Policy
+https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About MB Finance By Maayan Bar Lev
+MB Finance by Maayan Bar Lev is a high-end boutique accounting service with a deeply personal, feminine, and luxurious brand identity. The brand positions itself not as a traditional accounting firm, but as a provider of financial order, control, and peace of mind — speaking directly to business owners who feel lost in their numbers. The tone is calm, elegant, self-assured, and intimate, written entirely in first-person feminine voice ('I believe', 'I organize', 'I care'). The aesthetic vision is soft yet sharp: 70% feminine warmth and 30% professional precision, evoking the polished, editorial feel of a luxury Instagram brand with a nearly 'fairytale' elegance.
+
+## Target Audience
+בעלי עסקים שמעריכים סדר, בהירות ושקט נפשי
+
+## Industry
+שירותים פיננסיים / הנהלת חשבונות
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app/sitemap.xml
+- **Robots.txt**: https://mb-finance-by-maayan-bar-lev-21990d9f.zappy5.app/robots.txt
