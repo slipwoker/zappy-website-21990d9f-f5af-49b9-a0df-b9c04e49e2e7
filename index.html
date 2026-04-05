@@ -1363,124 +1363,134 @@
 
 
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
-/* ─── Google Fonts ─────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Heebo:wght@300;400;500&display=swap');
-
-/* ─── Section Root ──────────────────────────────────────────────────────── */
 .index-benefits-section {
   position: relative;
-  overflow: visible;
   background-color: #F8F1EA;
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.60) 0, rgba(255,255,255,0) 42%),
-    radial-gradient(circle at 85% 75%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 36%),
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 42%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 36%),
     linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(233,222,210,0.18) 100%);
   color: var(--text-dark);
-  padding: 90px 24px 80px;
+  padding: 100px 24px 80px;
+  overflow: hidden;
   direction: rtl;
   font-family: 'Heebo', 'Assistant', sans-serif;
 }
 
-/* ─── Decorative Background Layer ──────────────────────────────────────── */
-.index-benefits-section .ibs-bg-layer {
+/* Decorative background pattern */
+.index-benefits-section .ibs-bg-pattern {
   position: absolute;
   inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 80%, rgba(201,143,161,0.08) 0%, transparent 45%),
+    radial-gradient(circle at 90% 10%, rgba(184,145,89,0.07) 0%, transparent 40%);
   pointer-events: none;
   z-index: 0;
-  background-image:
-    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(201,143,161,0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(184,145,89,0.07) 0%, transparent 70%);
 }
 
-/* ─── Container ─────────────────────────────────────────────────────────── */
+/* Container */
 .index-benefits-section .ibs-container {
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
-  max-width: 1160px;
-  margin: 0 auto;
 }
 
-/* ─── Section Header ────────────────────────────────────────────────────── */
+/* Header */
 .index-benefits-section .ibs-header {
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 60px;
+  margin-bottom: 60px;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: 60px;
 }
 
 .index-benefits-section .ibs-eyebrow {
   display: inline-block;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Heebo', 'Assistant', sans-serif;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 16px;
-  padding-bottom: 10px;
   position: relative;
+  padding: 0 20px;
 }
+
+.index-benefits-section .ibs-eyebrow::before,
 .index-benefits-section .ibs-eyebrow::after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 32px;
+  top: 50%;
+  width: 30px;
   height: 1px;
   background: var(--accent);
   opacity: 0.5;
 }
 
+.index-benefits-section .ibs-eyebrow::before {
+  inset-inline-end: 100%;
+  margin-inline-end: -20px;
+}
+
+.index-benefits-section .ibs-eyebrow::after {
+  inset-inline-start: 100%;
+  margin-inline-start: -20px;
+}
+
 .index-benefits-section .ibs-title {
-  font-family: 'Cormorant Garamond', 'David Libre', serif;
+  font-family: 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', Georgia, serif;
   font-size: 34px;
   font-weight: 400;
   line-height: 1.25;
+  color: #5F4736;
+  margin: 0 0 20px;
   letter-spacing: -0.01em;
-  color: var(--text-dark);
-  margin: 0 0 22px;
+  text-align: center;
   max-width: none !important;
 }
 
-.index-benefits-section .ibs-title em {
-  font-style: italic;
+.index-benefits-section .ibs-title-break {
+  display: block;
   color: var(--primary);
+  font-style: italic;
 }
 
 .index-benefits-section .ibs-intro {
   font-size: 16px;
   line-height: 1.8;
-  color: var(--text-muted);
+  color: #7A614C;
+  text-align: center;
   margin: 0;
   max-width: none !important;
-  text-align: center;
 }
 
-/* ─── Benefits Grid ─────────────────────────────────────────────────────── */
+/* Grid */
 .index-benefits-section .ibs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: 22px;
+  gap: 24px;
   direction: rtl;
 }
 
-/* ─── Card Base ─────────────────────────────────────────────────────────── */
+/* Cards */
 .index-benefits-section .ibs-card {
-  position: relative;
   background: rgba(255, 253, 251, 0.92);
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(142, 112, 82, 0.10);
+  box-shadow: 0 10px 30px rgba(142, 112, 82, 0.14);
   border: 1px solid rgba(232, 220, 207, 0.7);
   padding: 32px 28px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 0;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
-  overflow: hidden;
-  text-align: right;
 }
 
 .index-benefits-section .ibs-card:hover {
@@ -1488,199 +1498,197 @@
   box-shadow: 0 20px 48px rgba(142, 112, 82, 0.18);
 }
 
-/* ─── Card Variants ─────────────────────────────────────────────────────── */
 .index-benefits-section .ibs-card--featured {
-  background: linear-gradient(145deg, rgba(255,253,251,0.97) 0%, rgba(247,239,232,0.95) 100%);
-  border-color: rgba(201, 143, 161, 0.30);
+  background: linear-gradient(135deg, rgba(255,253,251,0.97) 0%, rgba(242,231,219,0.85) 100%);
+  border-color: rgba(201,143,161,0.3);
 }
 
-.index-benefits-section .ibs-card--highlighted {
-  background: linear-gradient(145deg, rgba(255,250,247,0.97) 0%, rgba(245,236,228,0.95) 100%);
-  border-color: rgba(184, 145, 89, 0.28);
+.index-benefits-section .ibs-card--accent {
+  background: linear-gradient(135deg, rgba(255,253,251,0.97) 0%, rgba(231,211,199,0.7) 100%);
+  border-color: rgba(184,145,89,0.25);
 }
 
 .index-benefits-section .ibs-card--wide {
   grid-column: span 3;
   flex-direction: row;
   align-items: flex-start;
-  gap: 24px;
+  gap: 28px;
 }
 
-.index-benefits-section .ibs-card--wide .ibs-card__content {
+.index-benefits-section .ibs-card--wide .ibs-card-icon-wrap {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.index-benefits-section .ibs-card--wide .ibs-card-content {
   flex: 1;
 }
 
-.index-benefits-section .ibs-card--wide .ibs-card__icon-wrap {
-  flex-shrink: 0;
-  margin-bottom: 0;
-  margin-inline-start: 0;
-}
-
-/* ─── Card Accent Line ──────────────────────────────────────────────────── */
-.index-benefits-section .ibs-card__accent-line {
+.index-benefits-section .ibs-card--wide .ibs-card-accent-line {
   position: absolute;
-  top: 0;
-  inset-inline-end: 0;
-  width: 3px;
-  height: 48px;
-  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
-  border-radius: 0 10px 0 0;
-  opacity: 0.5;
-  transition: opacity 0.28s ease, height 0.28s ease;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 0 0 10px 10px;
 }
 
-.index-benefits-section .ibs-card--highlighted .ibs-card__accent-line {
-  background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
-}
-
-.index-benefits-section .ibs-card:hover .ibs-card__accent-line {
-  opacity: 0.9;
-  height: 72px;
-}
-
-/* ─── Card Icon ─────────────────────────────────────────────────────────── */
-.index-benefits-section .ibs-card__icon-wrap {
+/* Icon wrap */
+.index-benefits-section .ibs-card-icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(201,143,161,0.15) 0%, rgba(184,145,89,0.1) 100%);
+  border: 1px solid rgba(201,143,161,0.25);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: rgba(201, 143, 161, 0.10);
-  color: var(--primary);
-  margin-bottom: 18px;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--accent);
   flex-shrink: 0;
-  transition: background 0.28s ease;
 }
 
-.index-benefits-section .ibs-card--highlighted .ibs-card__icon-wrap {
-  background: rgba(184, 145, 89, 0.10);
+.index-benefits-section .ibs-icon {
+  width: 24px;
+  height: 24px;
   color: var(--accent);
 }
 
-.index-benefits-section .ibs-card:hover .ibs-card__icon-wrap {
-  background: rgba(201, 143, 161, 0.18);
-}
-
-.index-benefits-section .ibs-card--highlighted:hover .ibs-card__icon-wrap {
-  background: rgba(184, 145, 89, 0.18);
-}
-
-.index-benefits-section .ibs-card__icon-wrap svg {
-  display: block;
-}
-
-/* ─── Card Content ──────────────────────────────────────────────────────── */
-.index-benefits-section .ibs-card__content {
+/* Card content */
+.index-benefits-section .ibs-card-content {
   flex: 1;
 }
 
-.index-benefits-section .ibs-card__title {
-  font-family: 'Cormorant Garamond', 'David Libre', serif;
+.index-benefits-section .ibs-card-title {
+  font-family: 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', Georgia, serif;
   font-size: 22px;
   font-weight: 500;
-  line-height: 1.35;
-  color: var(--text-dark);
-  margin: 0 0 10px;
-  text-align: right;
+  line-height: 1.3;
+  color: #5F4736;
+  margin: 0 0 12px;
+  text-align: start;
 }
 
-.index-benefits-section .ibs-card__text {
+.index-benefits-section .ibs-card-text {
   font-size: 16px;
   line-height: 1.75;
-  color: var(--text-muted);
+  color: #7A614C;
   margin: 0;
-  text-align: right;
+  text-align: start;
 }
 
-/* ─── Footer Tagline ────────────────────────────────────────────────────── */
-.index-benefits-section .ibs-footer-tagline {
-  margin-top: 56px;
+/* Accent line at bottom of card */
+.index-benefits-section .ibs-card-accent-line {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 0 3px 0 10px;
+}
+
+.index-benefits-section .ibs-card--featured .ibs-card-accent-line {
+  background: linear-gradient(90deg, var(--primary), rgba(201,143,161,0.4));
+}
+
+.index-benefits-section .ibs-card--accent .ibs-card-accent-line {
+  background: linear-gradient(90deg, var(--accent), rgba(184,145,89,0.4));
+}
+
+/* Closing statement */
+.index-benefits-section .ibs-closing {
+  margin-top: 60px;
   text-align: center;
-  display: flex;
+}
+
+.index-benefits-section .ibs-closing-inner {
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
+  max-width: 560px;
 }
 
-.index-benefits-section .ibs-tagline-ornament {
+.index-benefits-section .ibs-closing-ornament {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 100%;
-  max-width: 320px;
+  color: var(--primary);
+  opacity: 0.5;
 }
 
-.index-benefits-section .ibs-tagline-ornament span {
-  flex: 1;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184,145,89,0.4), transparent);
-}
-
-.index-benefits-section .ibs-diamond {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  background: var(--accent);
-  transform: rotate(45deg);
-  opacity: 0.6;
-  flex-shrink: 0;
-}
-
-.index-benefits-section .ibs-tagline-text {
-  font-family: 'Cormorant Garamond', 'David Libre', serif;
+.index-benefits-section .ibs-closing-text {
+  font-family: 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', Georgia, serif;
   font-size: 18px;
   font-style: italic;
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--text-muted);
-  margin: 0;
-  max-width: 560px;
+  line-height: 1.7;
+  color: #7A614C;
   text-align: center;
+  margin: 0;
   max-width: none !important;
 }
 
-/* ─── Responsive: Tablet ─────────────────────────────────────────────────── */
-@media (max-width: 1024px) {
+/* ── Responsive ── */
+@media (max-width: 960px) {
   .index-benefits-section .ibs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .index-benefits-section .ibs-card--wide {
     grid-column: span 2;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .index-benefits-section .ibs-card--wide .ibs-card-icon-wrap {
+    margin-bottom: 20px;
   }
 }
 
-/* ─── Responsive: Mobile ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .index-benefits-section {
-    padding: 72px 16px 56px;
+    padding: 100px 16px 60px;
   }
+
   .index-benefits-section .ibs-header {
     margin-bottom: 40px;
   }
+
   .index-benefits-section .ibs-title {
     font-size: 26px;
   }
+
   .index-benefits-section .ibs-grid {
     grid-template-columns: 1fr !important;
     gap: 16px;
   }
+
   .index-benefits-section .ibs-card--wide {
     grid-column: span 1 !important;
     flex-direction: column;
     gap: 0;
   }
-  .index-benefits-section .ibs-card--wide .ibs-card__icon-wrap {
-    margin-bottom: 18px;
+
+  .index-benefits-section .ibs-card--wide .ibs-card-icon-wrap {
+    margin-bottom: 20px;
   }
+
   .index-benefits-section .ibs-card {
     padding: 24px 20px 22px;
   }
-  .index-benefits-section .ibs-footer-tagline {
+
+  .index-benefits-section .ibs-closing {
     margin-top: 40px;
   }
-  .index-benefits-section .ibs-tagline-text {
+
+  .index-benefits-section .ibs-closing-text {
     font-size: 16px;
+  }
+
+  .index-benefits-section .ibs-eyebrow::before,
+  .index-benefits-section .ibs-eyebrow::after {
+    display: none;
   }
 }
 </style>
@@ -1768,16 +1776,16 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="0547688893" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   </button>
 
@@ -2246,10 +2254,10 @@
       <div class="index-hero-rule" aria-hidden="true"></div>
 
       <!-- Headline -->
-      <h1 class="index-hero-h1" >אני עושה לך סדר בכסף —<br>ומחזירה לך שליטה.</h1>
+      <h1 class="index-hero-h1" style>אני עושה לך סדר בכסף —<br>ומחזירה לך שליטה.</h1>
 
       <!-- Subtitle -->
-      <h3 class="index-hero-subtitle" >לבעלי עסקים שמבינים שסדר פיננסי זה לא מותרות —<br>אלא הבסיס לשקט נפשי.</h3>
+      <h3 class="index-hero-subtitle" style>לבעלי עסקים שמבינים שסדר פיננסי זה לא מותרות —<br>אלא הבסיס לשקט נפשי.</h3>
 
       <!-- CTAs -->
       <div class="index-hero-ctas">
@@ -2269,7 +2277,7 @@
   <!-- Bottom Scalloped Wave Divider -->
   <div class="index-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,90 L0,52 Q60,38 120,50 Q180,62 240,44 Q300,26 360,42 Q420,58 480,42 Q540,26 600,44 Q660,62 720,46 Q780,30 840,46 Q900,62 960,46 Q1020,30 1080,46 Q1140,62 1200,46 Q1260,30 1320,48 Q1380,62 1440,50 L1440,90 Z" fill="#F2E7DB"></path>
+      <path d="M0,90 L0,52 Q60,38 120,50 Q180,62 240,44 Q300,26 360,42 Q420,58 480,42 Q540,26 600,44 Q660,62 720,46 Q780,30 840,46 Q900,62 960,46 Q1020,30 1080,46 Q1140,62 1200,46 Q1260,30 1320,48 Q1380,62 1440,50 L1440,90 Z" fill="#F2E7DB"/>
     </svg>
   </div>
 
@@ -2296,7 +2304,7 @@
       <!-- Left (visual) column -->
       <div class="prob-visual-col">
         <div class="prob-image-card">
-          <img data-placeholder="index-problem-image-1" data-context="Elegant flat lay of a feminine workspace: a soft cream notebook, gold pen, scattered financial papers, a delicate floral sprig, and a warm cup of coffee on a marble surface. Soft natural light, warm tones, luxury boutique accounting aesthetic." width="520" height="640" src="" alt="סביבת עבודה אלגנטית עם מסמכים פיננסיים" style="object-fit: cover; object-position: center;">
+          <img data-placeholder="index-problem-image-1" data-context="Elegant flat lay of a feminine workspace: a soft cream notebook, gold pen, scattered financial papers, a delicate floral sprig, and a warm cup of coffee on a marble surface. Soft natural light, warm tones, luxury boutique accounting aesthetic." width="520" height="640" src alt="סביבת עבודה אלגנטית עם מסמכים פיננסיים" style="object-fit: cover; object-position: center;">
           <!-- Quote card overlay -->
           <div class="prob-quote-card">
             <span class="prob-quote-mark">״</span>
@@ -2317,7 +2325,7 @@
 
           <li class="prob-pain-item">
             <div class="prob-pain-icon-wrap">
-              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
             </div>
             <div class="prob-pain-body">
               <h3 class="prob-pain-title">חוסר סדר בכרטסות</h3>
@@ -2327,7 +2335,7 @@
 
           <li class="prob-pain-item">
             <div class="prob-pain-icon-wrap">
-              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
             </div>
             <div class="prob-pain-body">
               <h3 class="prob-pain-title">אי הבנת דוחות כספיים</h3>
@@ -2337,7 +2345,7 @@
 
           <li class="prob-pain-item">
             <div class="prob-pain-icon-wrap">
-              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             </div>
             <div class="prob-pain-body">
               <h3 class="prob-pain-title">תחושת איבוד שליטה</h3>
@@ -2347,7 +2355,7 @@
 
           <li class="prob-pain-item">
             <div class="prob-pain-icon-wrap">
-              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
             <div class="prob-pain-body">
               <h3 class="prob-pain-title">החלטות מתוך חוסר ודאות</h3>
@@ -2364,7 +2372,7 @@
   <!-- Bottom SVG wave divider -->
   <div class="prob-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,70 L0,38 Q100,28 200,38 T400,32 Q500,26 600,34 T800,30 Q900,24 1000,34 T1200,28 L1200,70 Z" fill="var(--bg-dark)"></path>
+      <path d="M0,70 L0,38 Q100,28 200,38 T400,32 Q500,26 600,34 T800,30 Q900,24 1000,34 T1200,28 L1200,70 Z" fill="var(--bg-dark)"/>
     </svg>
   </div>
 
@@ -2651,7 +2659,7 @@
 
     <!-- Section Header -->
     <div class="index-services-header">
-      <p style="text-align: center;"><span class="index-services-eyebrow" >מה אני עושה בשבילך</span>
+      <p style="text-align: center;"><span class="index-services-eyebrow" style>מה אני עושה בשבילך</span>
       </p><h2 class="index-services-title" style="text-align: center;">הנהלת חשבונות לעסקים<br>מקצה לקצה, בלי שתרגיש אבוד</h2>
       <p class="index-services-subtitle">זו לא רק הנהלת חשבונות טכנית. אני בונה עבורך מערכת שלמה של סדר פיננסי, המשכיות ושקט נפשי — כך שתוכלי להתמקד בעסק שלך בידיעה שהמספרים בידיים טובות.</p>
     </div>
@@ -2662,7 +2670,7 @@
       <!-- Card 1 -->
       <article class="index-service-card" data-grid-item-index="0">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">הנהלת חשבונות שוטפת</h3>
@@ -2673,7 +2681,7 @@
       <!-- Card 2 -->
       <article class="index-service-card" data-grid-item-index="1">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">התאמות בנק</h3>
@@ -2684,7 +2692,7 @@
       <!-- Card 3 -->
       <article class="index-service-card" data-grid-item-index="2">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">סדר בכרטסות</h3>
@@ -2695,7 +2703,7 @@
       <!-- Card 4 -->
       <article class="index-service-card" data-grid-item-index="3">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">דיווחים לרשויות המס</h3>
@@ -2706,7 +2714,7 @@
       <!-- Card 5 -->
       <article class="index-service-card" data-grid-item-index="4">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">גבייה מלקוחות</h3>
@@ -2717,7 +2725,7 @@
       <!-- Card 6 -->
       <article class="index-service-card" data-grid-item-index="5">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">השלמת מסמכים</h3>
@@ -2728,7 +2736,7 @@
       <!-- Card 7 -->
       <article class="index-service-card" data-grid-item-index="6">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">טיפול בפערים ובעיות</h3>
@@ -2739,7 +2747,7 @@
       <!-- Card 8 -->
       <article class="index-service-card" data-grid-item-index="7">
         <div class="index-service-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
         <div class="index-service-content">
           <h3 class="index-service-title">תיאום מול רואה החשבון</h3>
@@ -2766,117 +2774,21 @@
   <!-- Bottom Divider -->
   <div class="index-services-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 72" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,72 L0,48 Q150,18 300,36 Q450,54 600,28 Q750,4 900,32 Q1050,56 1200,38 L1200,72 Z" fill="#FBF6F1"></path>
+      <path d="M0,72 L0,48 Q150,18 300,36 Q450,54 600,28 Q750,4 900,32 Q1050,56 1200,38 L1200,72 Z" fill="var(--bg-light)"/>
     </svg>
   </div>
 
 </section>
 
-<section class="index-benefits-section" dir="rtl" data-layout-spec="בית-benefits" data-zappy-section="true" id="zappy-section-4">
-  <div class="ibs-bg-layer" aria-hidden="true"></div>
-
-  <div class="ibs-container">
-
-    <!-- Section Header -->
-    <div class="ibs-header">
-      <span class="ibs-eyebrow">למה לעבוד איתי?</span>
-      <h2 class="ibs-title">אני לא רק מנהלת חשבונות<br><em>אני מחזירה לך שקט נפשי</em></h2>
-      <p class="ibs-intro">אני מאמינה שכל עסק ראוי לסדר פיננסי אמיתי. לא רק דוחות שמוגשים בזמן — אלא תחושת שליטה, בהירות, ומישהי שאכפת לה באמת מהמספרים שלך.</p>
-    </div>
-
-    <!-- Benefits Grid -->
-    <div class="ibs-grid">
-
-      <!-- Card 1 -->
-      <article class="ibs-card ibs-card--featured">
-        <div class="ibs-card__icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
-            <path d="M14 24h20M14 17h20M14 31h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-          </svg>
-        </div>
-        <div class="ibs-card__content">
-          <h3 class="ibs-card__title">סדר אמיתי בספרים</h3>
-          <p class="ibs-card__text">אני מסדרת כרטסות, מתאימה בנק, ומוצאת את הפערים שאחרים מפספסים. הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש.</p>
-        </div>
-        <div class="ibs-card__accent-line" aria-hidden="true"></div>
-      </article>
-
-      <!-- Card 2 -->
-      <article class="ibs-card">
-        <div class="ibs-card__icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
-            <path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.4"></circle>
-          </svg>
-        </div>
-        <div class="ibs-card__content">
-          <h3 class="ibs-card__title">שליטה בזמן אמת</h3>
-          <p class="ibs-card__text">אני מעדכנת, מדווחת ומתעדת בצורה שמאפשרת לך לקבל החלטות עסקיות מתוך בהירות — לא מתוך ניחושים.</p>
-        </div>
-        <div class="ibs-card__accent-line" aria-hidden="true"></div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="ibs-card">
-        <div class="ibs-card__icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
-            <path d="M16 30l5-5 4 4 7-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <div class="ibs-card__content">
-          <h3 class="ibs-card__title">בהירות פיננסית מלאה</h3>
-          <p class="ibs-card__text">דוחות רווח והפסד שאפשר להבין. מספרים שמספרים סיפור — לא מבלבלים. אני מסבירה, מלמדת ומוודאת שאת/ה מבין/ה.</p>
-        </div>
-        <div class="ibs-card__accent-line" aria-hidden="true"></div>
-      </article>
-
-      <!-- Card 4 -->
-      <article class="ibs-card ibs-card--highlighted">
-        <div class="ibs-card__icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
-            <path d="M24 15c-5 0-9 4-9 9s4 9 9 9 9-4 9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
-            <path d="M28 11l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <div class="ibs-card__content">
-          <h3 class="ibs-card__title">שקט נפשי אמיתי</h3>
-          <p class="ibs-card__text">את/ה יודע/ת שיש מישהי שאחראית, קשובה ודואגת לפרטים הקטנים. אני לא רק מנהלת — אני שותפה שמחזיקה את המספרים בשבילך.</p>
-        </div>
-        <div class="ibs-card__accent-line" aria-hidden="true"></div>
-      </article>
-
-      <!-- Card 5 -->
-      <article class="ibs-card ibs-card--wide">
-        <div class="ibs-card__icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
-            <path d="M15 20h18M15 27h12M30 27l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <div class="ibs-card__content">
-          <h3 class="ibs-card__title">טיפול בחובות וחסרים</h3>
-          <p class="ibs-card__text">אני גם עוקבת אחרי גבייה, מסמכים חסרים ופערים שנפלו בין הכיסאות. כי סדר אמיתי הוא לא רק מה שיש — אלא גם מה שחסר.</p>
-        </div>
-        <div class="ibs-card__accent-line" aria-hidden="true"></div>
-      </article>
-
-    </div><!-- /ibs-grid -->
-
-    <!-- Bottom tagline -->
-    <div class="ibs-footer-tagline">
-      <div class="ibs-tagline-ornament" aria-hidden="true">
-        <span></span><i class="ibs-diamond" aria-hidden="true"></i><span></span>
-      </div>
-      <p class="ibs-tagline-text">הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש — ומסתיימת בשקט נפשי אמיתי.</p>
-    </div>
-
-  </div><!-- /ibs-container -->
-
+<section id="layout-1775428639456" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: rtl;" data-component-id="empty-section">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+    <p style="font-size: 16px; line-height: 1.7; color: #1F2937; opacity: 0.5; text-align: center; font-family: system-ui, -apple-system, sans-serif;">הוסף את תוכן הטקסט שלך כאן. זהו טקסט ממלא מקום שניתן לערוך.</p>
+  </div>
 </section>
+
+
+
+
 
 <section class="pricing-section" aria-labelledby="pricing-title" data-zappy-component="true" id="ai-section-1775427256191-asiuskv">
   <div class="pricing-container">
@@ -2893,14 +2805,14 @@
         <div class="pricing-card-inner">
           <div class="pricing-card-top">
             <div class="pricing-icon" aria-hidden="true">🌱</div>
-            <h3 class="plan-name" >עסקים קטנים</h3>
-            <p class="plan-desc" >מתאים לעצמאים ועסקים קטנים בתחילת דרכם</p>
-            <div class="plan-price" >
-              <span class="price-amount" >₪ 1,750</span>
-              <span class="price-period" >/ ריטיינר חודשי</span>
+            <h3 class="plan-name" style>עסקים קטנים</h3>
+            <p class="plan-desc" style>מתאים לעצמאים ועסקים קטנים בתחילת דרכם</p>
+            <div class="plan-price" style>
+              <span class="price-amount" style>₪ 1,750</span>
+              <span class="price-period" style>/ ריטיינר חודשי</span>
             </div>
           </div>
-          <ul class="plan-features" aria-label="כלול בתוכנית בסיסית" ><li class="feature-item">
+          <ul class="plan-features" aria-label="כלול בתוכנית בסיסית" style><li class="feature-item">
               <span class="feature-check" aria-hidden="true">✓</span>
               <span>הנהלת חשבונות שוטפת</span>
             </li><li class="feature-item">
@@ -2931,11 +2843,11 @@
         <div class="pricing-card-inner">
           <div class="pricing-card-top">
             <div class="pricing-icon" aria-hidden="true">🚀</div>
-            <h3 class="plan-name" >עסקים מתקדמים</h3>
-            <p class="plan-desc" >הבחירה המושלמת לעסקים צומחים</p>
-            <div class="plan-price" >
-              <span class="price-amount" >₪ 3,500</span>
-              <span class="price-period" >
+            <h3 class="plan-name" style>עסקים מתקדמים</h3>
+            <p class="plan-desc" style>הבחירה המושלמת לעסקים צומחים</p>
+            <div class="plan-price" style>
+              <span class="price-amount" style>₪ 3,500</span>
+              <span class="price-period" style>
 
 / ריטיינר חודשי
 
@@ -2979,11 +2891,11 @@
         <div class="pricing-card-inner">
           <div class="pricing-card-top">
             <div class="pricing-icon" aria-hidden="true">💎</div>
-            <h3 class="plan-name" >חברות בע"מ</h3>
-            <p class="plan-desc" >פתרון מקיף לעסקים עם תנועות מרובות</p>
-            <div class="plan-price" >
-              <span class="price-amount" >₪ 7,500</span>
-              <span class="price-period" >
+            <h3 class="plan-name" style>חברות בע"מ</h3>
+            <p class="plan-desc" style>פתרון מקיף לעסקים עם תנועות מרובות</p>
+            <div class="plan-price" style>
+              <span class="price-amount" style>₪ 7,500</span>
+              <span class="price-period" style>
 
 / ריטיינר חודשי
 
@@ -3024,7 +2936,7 @@
 
     </div>
 
-    <p class="pricing-note" >
+    <p class="pricing-note" style>
       <span aria-hidden="true">💬</span>
       לא בטוחים איזו תוכנית מתאימה לכם?
       <a href="#contact" class="pricing-contact-link" data-native-element="true" data-element-id="btn-1775427892076-i2upc1dyz" data-element-type="button" style="outline: none;">דברו איתי&nbsp;</a>
@@ -3043,7 +2955,7 @@
 
   <!-- Section Header -->
   <div class="stats-header">
-    <p  data-element-id="move-1775428302271-etnsi2v6"><span class="stats-label" >מספרים ותהליך</span>
+    <p style data-element-id="move-1775428302271-etnsi2v6"><span class="stats-label" style>מספרים ותהליך</span>
     </p><h2 class="stats-title" style="text-align: center;">מספרים שמדברים בשבילי</h2>
     <p class="stats-subtitle">אני לא מוכרת שירות — אני יוצרת סדר פיננסי, שליטה ושקט נפשי. הנה מה שאני מביאה לכל לקוח שבוחר לעבוד איתי.</p>
   </div>
@@ -3153,7 +3065,7 @@
       <div class="index-cta-whatsapp-wrap">
         <a href="#" target="_blank" rel="noopener noreferrer" class="index-cta-whatsapp-btn" style="display:none !important;" data-element-type="button" data-element-id="btn-1775427648629-n3rdqvwzw" data-native-element="true">
           <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
           </svg>
           שלחי לי הודעה בוואטסאפ
         </a>
@@ -3167,15 +3079,15 @@
         <p>אני מתחייבת לחזור לכל פנייה באופן אישי ולתת כיוון מותאם לעסק שלך.</p>
       </div>
 
-      <form class="contact-form index-cta-form" novalidate="">
+      <form class="contact-form index-cta-form" novalidate>
         <div class="index-cta-form-grid zappy-preserve-css-grid" id="zappy-auto-grid-1775427648943-pv0hyi" data-zappy-auto-grid="true" data-original-item-width="345" data-original-gap="16px" style="display: grid; --zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
           <div class="index-cta-field" data-grid-item-index="0">
             <label for="cta-name">שם מלא</label>
-            <input type="text" id="cta-name" name="name" placeholder="השם שלך" required="" fdprocessedid="i1cv2q">
+            <input type="text" id="cta-name" name="name" placeholder="השם שלך" required fdprocessedid="i1cv2q">
           </div>
           <div class="index-cta-field" data-grid-item-index="1">
             <label for="cta-email">כתובת מייל</label>
-            <input type="email" id="cta-email" name="email" placeholder="המייל שלך" required="" fdprocessedid="wfhv5j">
+            <input type="email" id="cta-email" name="email" placeholder="המייל שלך" required fdprocessedid="wfhv5j">
           </div>
           <div class="index-cta-field" data-grid-item-index="2">
             <label for="cta-phone">טלפון</label>
@@ -3189,7 +3101,7 @@
 
         <div class="privacy-consent">
           <label class="privacy-consent-label">
-            <input type="checkbox" name="privacy_consent" class="privacy-consent-checkbox" required="">
+            <input type="checkbox" name="privacy_consent" class="privacy-consent-checkbox" required>
             <span>קראתי ואני מסכים/ה ל<a href="/terms" target="_blank">תנאי השימוש</a> ול<a href="/privacy" target="_blank">מדיניות הפרטיות</a></span>
           </label>
         </div>
