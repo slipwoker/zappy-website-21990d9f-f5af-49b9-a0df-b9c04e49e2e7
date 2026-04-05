@@ -1361,267 +1361,326 @@
 
 </style>
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
+/* ─── Google Fonts ─────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Heebo:wght@300;400;500&display=swap');
+
+/* ─── Section Root ──────────────────────────────────────────────────────── */
 .index-benefits-section {
-  direction: rtl;
-  background-color: #F8F1EA;
-  background-image:
-    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.62) 0, rgba(255,255,255,0) 42%),
-    radial-gradient(circle at 85% 75%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 38%),
-    linear-gradient(180deg, #FBF6F1 0%, #F2E7DB 100%);
-  color: var(--text-dark);
-  padding: 90px 24px 80px;
   position: relative;
   overflow: visible;
+  background-color: #F8F1EA;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.60) 0, rgba(255,255,255,0) 42%),
+    radial-gradient(circle at 85% 75%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(233,222,210,0.18) 100%);
+  color: var(--text-dark);
+  padding: 90px 24px 80px;
+  direction: rtl;
+  font-family: 'Heebo', 'Assistant', sans-serif;
 }
 
-.index-benefits-section .index-benefits-container {
-  max-width: 1200px;
+/* ─── Decorative Background Layer ──────────────────────────────────────── */
+.index-benefits-section .ibs-bg-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 90% 10%, rgba(201,143,161,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 10% 90%, rgba(184,145,89,0.07) 0%, transparent 70%);
+}
+
+/* ─── Container ─────────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
-/* ── Header ── */
-.index-benefits-section .index-benefits-header {
+/* ─── Section Header ────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-header {
   text-align: center;
-  max-width: 680px;
-  margin: 0 auto 64px;
+  max-width: 720px;
+  margin: 0 auto 60px;
 }
 
-.index-benefits-section .index-benefits-eyebrow {
+.index-benefits-section .ibs-eyebrow {
   display: inline-block;
-  font-family: 'Heebo', 'Assistant', sans-serif;
+  font-family: 'Heebo', sans-serif;
   font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-weight: 500;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 16px;
+  padding-bottom: 10px;
   position: relative;
-  padding-bottom: 12px;
 }
-
-.index-benefits-section .index-benefits-eyebrow::after {
+.index-benefits-section .ibs-eyebrow::after {
   content: '';
-  display: block;
-  width: 36px;
-  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 1px;
   background: var(--accent);
-  margin: 10px auto 0;
-  border-radius: 2px;
+  opacity: 0.5;
 }
 
-.index-benefits-section .index-benefits-title {
-  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
+.index-benefits-section .ibs-title {
+  font-family: 'Cormorant Garamond', 'David Libre', serif;
   font-size: 34px;
   font-weight: 400;
   line-height: 1.25;
-  color: var(--text-dark);
-  margin: 0 0 20px;
   letter-spacing: -0.01em;
+  color: var(--text-dark);
+  margin: 0 0 22px;
+  max-width: none !important;
 }
 
-.index-benefits-section .index-benefits-subtitle {
-  font-family: 'Heebo', 'Assistant', sans-serif;
+.index-benefits-section .ibs-title em {
+  font-style: italic;
+  color: var(--primary);
+}
+
+.index-benefits-section .ibs-intro {
   font-size: 16px;
   line-height: 1.8;
   color: var(--text-muted);
   margin: 0;
+  max-width: none !important;
   text-align: center;
 }
 
-/* ── Grid ── */
-.index-benefits-section .index-benefits-grid {
+/* ─── Benefits Grid ─────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
-  gap: 20px;
+  gap: 22px;
   direction: rtl;
 }
 
-/* Wide card spans 2 columns */
-.index-benefits-section .index-benefit-card--wide {
-  grid-column: span 2;
-}
-
-/* ── Card Base ── */
-.index-benefits-section .index-benefit-card {
-  background: rgba(255, 253, 251, 0.92);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(142, 112, 82, 0.10);
-  border: 1px solid rgba(232, 220, 207, 0.75);
-  padding: 32px 28px 28px;
+/* ─── Card Base ─────────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-card {
   position: relative;
-  overflow: hidden;
+  background: rgba(255, 253, 251, 0.92);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(142, 112, 82, 0.10);
+  border: 1px solid rgba(232, 220, 207, 0.7);
+  padding: 32px 28px 28px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0;
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  overflow: hidden;
   text-align: right;
-  min-width: 0;
 }
 
-.index-benefits-section .index-benefit-card:hover {
+.index-benefits-section .ibs-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 42px rgba(142, 112, 82, 0.16);
+  box-shadow: 0 20px 48px rgba(142, 112, 82, 0.18);
 }
 
-/* Featured card – slightly richer background */
-.index-benefits-section .index-benefit-card--featured {
-  background: rgba(255, 248, 242, 0.97);
-  border-color: rgba(201, 143, 161, 0.25);
+/* ─── Card Variants ─────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-card--featured {
+  background: linear-gradient(145deg, rgba(255,253,251,0.97) 0%, rgba(247,239,232,0.95) 100%);
+  border-color: rgba(201, 143, 161, 0.30);
 }
 
-/* Accent card – warm rose tint */
-.index-benefits-section .index-benefit-card--accent {
-  background: linear-gradient(145deg, rgba(255, 250, 248, 0.97) 0%, rgba(246, 235, 230, 0.92) 100%);
-  border-color: rgba(201, 143, 161, 0.35);
+.index-benefits-section .ibs-card--highlighted {
+  background: linear-gradient(145deg, rgba(255,250,247,0.97) 0%, rgba(245,236,228,0.95) 100%);
+  border-color: rgba(184, 145, 89, 0.28);
 }
 
-/* ── Icon Wrap ── */
-.index-benefits-section .index-benefit-icon-wrap {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(201,143,161,0.14) 0%, rgba(184,145,89,0.10) 100%);
-  border: 1px solid rgba(201, 143, 161, 0.28);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  flex-shrink: 0;
-  transition: background 0.25s ease;
+.index-benefits-section .ibs-card--wide {
+  grid-column: span 3;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px;
 }
 
-.index-benefits-section .index-benefit-card:hover .index-benefit-icon-wrap {
-  background: linear-gradient(135deg, rgba(201,143,161,0.22) 0%, rgba(184,145,89,0.16) 100%);
-}
-
-.index-benefits-section .index-benefit-card--accent .index-benefit-icon-wrap {
-  background: linear-gradient(135deg, rgba(201,143,161,0.22) 0%, rgba(201,143,161,0.10) 100%);
-  border-color: rgba(201, 143, 161, 0.4);
-  color: var(--primary);
-}
-
-/* ── Content ── */
-.index-benefits-section .index-benefit-content {
+.index-benefits-section .ibs-card--wide .ibs-card__content {
   flex: 1;
 }
 
-.index-benefits-section .index-benefit-title {
-  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 1.3;
-  color: var(--text-dark);
-  margin: 0 0 10px;
+.index-benefits-section .ibs-card--wide .ibs-card__icon-wrap {
+  flex-shrink: 0;
+  margin-bottom: 0;
+  margin-inline-start: 0;
 }
 
-.index-benefits-section .index-benefit-desc {
-  font-family: 'Heebo', 'Assistant', sans-serif;
+/* ─── Card Accent Line ──────────────────────────────────────────────────── */
+.index-benefits-section .ibs-card__accent-line {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  width: 3px;
+  height: 48px;
+  background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
+  border-radius: 0 10px 0 0;
+  opacity: 0.5;
+  transition: opacity 0.28s ease, height 0.28s ease;
+}
+
+.index-benefits-section .ibs-card--highlighted .ibs-card__accent-line {
+  background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+}
+
+.index-benefits-section .ibs-card:hover .ibs-card__accent-line {
+  opacity: 0.9;
+  height: 72px;
+}
+
+/* ─── Card Icon ─────────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-card__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(201, 143, 161, 0.10);
+  color: var(--primary);
+  margin-bottom: 18px;
+  flex-shrink: 0;
+  transition: background 0.28s ease;
+}
+
+.index-benefits-section .ibs-card--highlighted .ibs-card__icon-wrap {
+  background: rgba(184, 145, 89, 0.10);
+  color: var(--accent);
+}
+
+.index-benefits-section .ibs-card:hover .ibs-card__icon-wrap {
+  background: rgba(201, 143, 161, 0.18);
+}
+
+.index-benefits-section .ibs-card--highlighted:hover .ibs-card__icon-wrap {
+  background: rgba(184, 145, 89, 0.18);
+}
+
+.index-benefits-section .ibs-card__icon-wrap svg {
+  display: block;
+}
+
+/* ─── Card Content ──────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-card__content {
+  flex: 1;
+}
+
+.index-benefits-section .ibs-card__title {
+  font-family: 'Cormorant Garamond', 'David Libre', serif;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-dark);
+  margin: 0 0 10px;
+  text-align: right;
+}
+
+.index-benefits-section .ibs-card__text {
   font-size: 16px;
   line-height: 1.75;
   color: var(--text-muted);
   margin: 0;
-}
-
-/* ── Decorative Number ── */
-.index-benefits-section .index-benefit-number {
-  position: absolute;
-  bottom: 16px;
-  left: 20px;
-  font-family: 'Fraunces', 'Cormorant Garamond', serif;
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 1;
-  color: rgba(201, 143, 161, 0.10);
-  pointer-events: none;
-  user-select: none;
-  letter-spacing: -0.02em;
-}
-
-/* ── Quote Strip ── */
-.index-benefits-section .index-benefits-quote-strip {
-  margin-top: 56px;
-  padding: 28px 40px;
-  background: linear-gradient(135deg, rgba(201,143,161,0.12) 0%, rgba(184,145,89,0.08) 100%);
-  border-radius: 10px;
-  border: 1px solid rgba(201, 143, 161, 0.22);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  direction: rtl;
-}
-
-.index-benefits-section .index-benefits-quote-mark {
-  font-family: 'Fraunces', 'Cormorant Garamond', serif;
-  font-size: 72px;
-  line-height: 0.6;
-  color: var(--primary);
-  opacity: 0.35;
-  flex-shrink: 0;
-  align-self: flex-start;
-  padding-top: 10px;
-}
-
-.index-benefits-section .index-benefits-quote-text {
-  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-dark);
-  margin: 0;
-  font-style: italic;
   text-align: right;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .index-benefits-section .index-benefits-grid {
+/* ─── Footer Tagline ────────────────────────────────────────────────────── */
+.index-benefits-section .ibs-footer-tagline {
+  margin-top: 56px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.index-benefits-section .ibs-tagline-ornament {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.index-benefits-section .ibs-tagline-ornament span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,145,89,0.4), transparent);
+}
+
+.index-benefits-section .ibs-diamond {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+  transform: rotate(45deg);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.index-benefits-section .ibs-tagline-text {
+  font-family: 'Cormorant Garamond', 'David Libre', serif;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 560px;
+  text-align: center;
+  max-width: none !important;
+}
+
+/* ─── Responsive: Tablet ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .index-benefits-section .ibs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .index-benefits-section .index-benefit-card--wide {
+  .index-benefits-section .ibs-card--wide {
     grid-column: span 2;
   }
 }
 
+/* ─── Responsive: Mobile ─────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .index-benefits-section {
-    padding: 60px 16px 56px;
+    padding: 72px 16px 56px;
   }
-  .index-benefits-section .index-benefits-header {
+  .index-benefits-section .ibs-header {
     margin-bottom: 40px;
   }
-  .index-benefits-section .index-benefits-title {
+  .index-benefits-section .ibs-title {
     font-size: 26px;
   }
-  .index-benefits-section .index-benefits-grid {
+  .index-benefits-section .ibs-grid {
     grid-template-columns: 1fr !important;
-    gap: 14px;
+    gap: 16px;
   }
-  .index-benefits-section .index-benefit-card--wide {
+  .index-benefits-section .ibs-card--wide {
     grid-column: span 1 !important;
+    flex-direction: column;
+    gap: 0;
   }
-  .index-benefits-section .index-benefit-card {
+  .index-benefits-section .ibs-card--wide .ibs-card__icon-wrap {
+    margin-bottom: 18px;
+  }
+  .index-benefits-section .ibs-card {
     padding: 24px 20px 22px;
   }
-  .index-benefits-section .index-benefit-number {
-    font-size: 38px;
-    bottom: 10px;
-    left: 14px;
+  .index-benefits-section .ibs-footer-tagline {
+    margin-top: 40px;
   }
-  .index-benefits-section .index-benefits-quote-strip {
-    margin-top: 36px;
-    padding: 20px 22px;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .index-benefits-section .index-benefits-quote-mark {
-    font-size: 52px;
-    align-self: flex-start;
-  }
-  .index-benefits-section .index-benefits-quote-text {
-    font-size: 17px;
+  .index-benefits-section .ibs-tagline-text {
+    font-size: 16px;
   }
 }
 </style>
@@ -2713,83 +2772,110 @@
 
 </section>
 
-<section class="index-benefits-section" data-layout-spec="בית-benefits" dir="rtl" data-zappy-section="true" id="zappy-section-4" style="opacity: 1;">
-  <div class="index-benefits-container">
+<section class="index-benefits-section" dir="rtl" data-layout-spec="בית-benefits" data-zappy-section="true" id="zappy-section-4">
+  <div class="ibs-bg-layer" aria-hidden="true"></div>
+
+  <div class="ibs-container">
 
     <!-- Section Header -->
-    <div class="index-benefits-header">
-      <p><span class="index-benefits-eyebrow">למה לעבוד איתי?</span>
-      </p><h2 class="index-benefits-title" style="text-align: center;">אני לא רק מנהלת חשבונות&nbsp;<br>אני מחזירה לך שקט נפשי</h2>
-      <p class="index-benefits-subtitle">אני מאמינה שכל עסק ראוי לסדר פיננסי אמיתי. לא רק דוחות שמוגשים בזמן — אלא תחושת שליטה, בהירות, ומישהי שאכפת לה באמת מהמספרים שלך.</p>
+    <div class="ibs-header">
+      <span class="ibs-eyebrow">למה לעבוד איתי?</span>
+      <h2 class="ibs-title">אני לא רק מנהלת חשבונות<br><em>אני מחזירה לך שקט נפשי</em></h2>
+      <p class="ibs-intro">אני מאמינה שכל עסק ראוי לסדר פיננסי אמיתי. לא רק דוחות שמוגשים בזמן — אלא תחושת שליטה, בהירות, ומישהי שאכפת לה באמת מהמספרים שלך.</p>
     </div>
 
     <!-- Benefits Grid -->
-    <div class="index-benefits-grid">
+    <div class="ibs-grid">
 
-      <article class="index-benefit-card index-benefit-card--featured">
-        <div class="index-benefit-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      <!-- Card 1 -->
+      <article class="ibs-card ibs-card--featured">
+        <div class="ibs-card__icon-wrap">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
+            <path d="M14 24h20M14 17h20M14 31h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          </svg>
         </div>
-        <div class="index-benefit-content">
-          <h3 class="index-benefit-title">סדר אמיתי בספרים</h3>
-          <p class="index-benefit-desc">אני מסדרת כרטסות, מתאימה בנק, ומוצאת את הפערים שאחרים מפספסים. הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש.</p>
+        <div class="ibs-card__content">
+          <h3 class="ibs-card__title">סדר אמיתי בספרים</h3>
+          <p class="ibs-card__text">אני מסדרת כרטסות, מתאימה בנק, ומוצאת את הפערים שאחרים מפספסים. הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש.</p>
         </div>
-        <div class="index-benefit-number" aria-hidden="true">01</div>
+        <div class="ibs-card__accent-line" aria-hidden="true"></div>
       </article>
 
-      <article class="index-benefit-card">
-        <div class="index-benefit-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <!-- Card 2 -->
+      <article class="ibs-card">
+        <div class="ibs-card__icon-wrap">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
+            <path d="M24 14v10l6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="24" cy="24" r="3" fill="currentColor" opacity="0.4"></circle>
+          </svg>
         </div>
-        <div class="index-benefit-content">
-          <h3 class="index-benefit-title">שליטה בזמן אמת</h3>
-          <p class="index-benefit-desc">אני מעדכנת, מדווחת ומתעדת בצורה שמאפשרת לך לקבל החלטות עסקיות מתוך בהירות — לא מתוך ניחושים.</p>
+        <div class="ibs-card__content">
+          <h3 class="ibs-card__title">שליטה בזמן אמת</h3>
+          <p class="ibs-card__text">אני מעדכנת, מדווחת ומתעדת בצורה שמאפשרת לך לקבל החלטות עסקיות מתוך בהירות — לא מתוך ניחושים.</p>
         </div>
-        <div class="index-benefit-number" aria-hidden="true">02</div>
+        <div class="ibs-card__accent-line" aria-hidden="true"></div>
       </article>
 
-      <article class="index-benefit-card">
-        <div class="index-benefit-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+      <!-- Card 3 -->
+      <article class="ibs-card">
+        <div class="ibs-card__icon-wrap">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
+            <path d="M16 30l5-5 4 4 7-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
         </div>
-        <div class="index-benefit-content">
-          <h3 class="index-benefit-title">בהירות פיננסית מלאה</h3>
-          <p class="index-benefit-desc">דוחות רווח והפסד שאפשר להבין. מספרים שמספרים סיפור — לא מבלבלים. אני מסבירה, מלמדת ומוודאת שאת/ה מבין/ה.</p>
+        <div class="ibs-card__content">
+          <h3 class="ibs-card__title">בהירות פיננסית מלאה</h3>
+          <p class="ibs-card__text">דוחות רווח והפסד שאפשר להבין. מספרים שמספרים סיפור — לא מבלבלים. אני מסבירה, מלמדת ומוודאת שאת/ה מבין/ה.</p>
         </div>
-        <div class="index-benefit-number" aria-hidden="true">03</div>
+        <div class="ibs-card__accent-line" aria-hidden="true"></div>
       </article>
 
-      <article class="index-benefit-card index-benefit-card--accent">
-        <div class="index-benefit-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+      <!-- Card 4 -->
+      <article class="ibs-card ibs-card--highlighted">
+        <div class="ibs-card__icon-wrap">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
+            <path d="M24 15c-5 0-9 4-9 9s4 9 9 9 9-4 9-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M28 11l5 5-5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
         </div>
-        <div class="index-benefit-content">
-          <h3 class="index-benefit-title">שקט נפשי אמיתי</h3>
-          <p class="index-benefit-desc">את/ה יודע/ת שיש מישהי שאחראית, קשובה ודואגת לפרטים הקטנים. אני לא רק מנהלת — אני שותפה שמחזיקה את המספרים בשבילך.</p>
+        <div class="ibs-card__content">
+          <h3 class="ibs-card__title">שקט נפשי אמיתי</h3>
+          <p class="ibs-card__text">את/ה יודע/ת שיש מישהי שאחראית, קשובה ודואגת לפרטים הקטנים. אני לא רק מנהלת — אני שותפה שמחזיקה את המספרים בשבילך.</p>
         </div>
-        <div class="index-benefit-number" aria-hidden="true">04</div>
+        <div class="ibs-card__accent-line" aria-hidden="true"></div>
       </article>
 
-      <article class="index-benefit-card index-benefit-card--wide">
-        <div class="index-benefit-icon-wrap">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+      <!-- Card 5 -->
+      <article class="ibs-card ibs-card--wide">
+        <div class="ibs-card__icon-wrap">
+          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true" width="36" height="36">
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5" opacity="0.25"></circle>
+            <path d="M15 20h18M15 27h12M30 27l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
         </div>
-        <div class="index-benefit-content">
-          <h3 class="index-benefit-title">טיפול בחובות וחסרים</h3>
-          <p class="index-benefit-desc">אני גם עוקבת אחרי גבייה, מסמכים חסרים ופערים שנפלו בין הכיסאות. כי סדר אמיתי הוא לא רק מה שיש — אלא גם מה שחסר.</p>
+        <div class="ibs-card__content">
+          <h3 class="ibs-card__title">טיפול בחובות וחסרים</h3>
+          <p class="ibs-card__text">אני גם עוקבת אחרי גבייה, מסמכים חסרים ופערים שנפלו בין הכיסאות. כי סדר אמיתי הוא לא רק מה שיש — אלא גם מה שחסר.</p>
         </div>
-        <div class="index-benefit-number" aria-hidden="true">05</div>
+        <div class="ibs-card__accent-line" aria-hidden="true"></div>
       </article>
 
+    </div><!-- /ibs-grid -->
+
+    <!-- Bottom tagline -->
+    <div class="ibs-footer-tagline">
+      <div class="ibs-tagline-ornament" aria-hidden="true">
+        <span></span><i class="ibs-diamond" aria-hidden="true"></i><span></span>
+      </div>
+      <p class="ibs-tagline-text">הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש — ומסתיימת בשקט נפשי אמיתי.</p>
     </div>
 
-    <!-- Decorative quote strip -->
-    <div class="index-benefits-quote-strip">
-      <p class="zappy-editable"><span class="index-benefits-quote-mark" aria-hidden="true">"</span>
-      </p><p class="index-benefits-quote-text">הנהלת חשבונות לעסקים קטנים שמתחילה מהשורש — ומסתיימת בשקט נפשי אמיתי.</p>
-    </div>
+  </div><!-- /ibs-container -->
 
-  </div>
 </section>
 
 <section class="pricing-section" aria-labelledby="pricing-title" data-zappy-component="true" id="ai-section-1775427256191-asiuskv">
