@@ -937,23 +937,286 @@
   <div class="index-problem-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <!-- Blush layer -->
-      <path d="M0,90 L0,52 Q30,44 60,54 T130,46 Q170,50 210,42 T290,48 Q330,52 370,44 T450,50 Q490,46 530,54 T610,44 Q650,50 690,46 T770,52 Q810,44 850,50 T930,44 Q970,50 1010,46 T1090,52 Q1130,46 1160,50 L1200,48 L1200,90 Z" fill="var(--bg-light)" opacity="0.55"></path>
+      <path d="M0,90 L0,52 Q30,44 60,54 T130,46 Q170,50 210,42 T290,48 Q330,52 370,44 T450,50 Q490,46 530,54 T610,44 Q650,50 690,46 T770,52 Q810,44 850,50 T930,44 Q970,50 1010,46 T1090,52 Q1130,46 1160,50 L1200,48 L1200,90 Z" fill="var(--bg-dark)" opacity="0.55"></path>
       <!-- Nude base layer -->
-      <path d="M0,90 L0,62 Q40,56 80,64 T170,56 Q210,62 250,54 T340,60 Q380,56 420,64 T510,56 Q550,62 590,58 T680,64 Q720,56 760,62 T850,56 Q890,62 930,58 T1020,64 Q1060,56 1100,62 T1180,58 L1200,60 L1200,90 Z" fill="var(--bg-light)"></path>
+      <path d="M0,90 L0,62 Q40,56 80,64 T170,56 Q210,62 250,54 T340,60 Q380,56 420,64 T510,56 Q550,62 590,58 T680,64 Q720,56 760,62 T850,56 Q890,62 930,58 T1020,64 Q1060,56 1100,62 T1180,58 L1200,60 L1200,90 Z" fill="var(--bg-dark)"></path>
     </svg>
   </div>
 
 </section>
 
-<section class="feat-section" aria-labelledby="feat-heading" data-zappy-component="true" id="ai-section-1775426169002-0rbolhr">
-  <div class="feat-container">
-    <div class="feat-header">
-      <h2 class="feat-title" id="feat-heading" style="text-align: center;"><span style="font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.015em;">למה לבחור ב-MB Finance?</span></h2>
-      <p class="feat-subtitle" style="text-align: center;">אני מספקת פתרונות הנהלת חשבונות מקצועיים, אישיים ומדויקים,&nbsp;<br>כדי שתוכלו להתמקד בעסק שלכם בלי דאגות.</p>
+<section style="position:relative;width:100%;max-width:100%;box-sizing:border-box;overflow:hidden;background:var(--bg-dark);padding:0;" data-zappy-section="true" class="section" id="ai-section-1775426169002-0rbolhr">
+<style>
+  .mbf-why-section {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 100px 0 120px;
+    box-sizing: border-box;
+  }
+
+  /* Animated background blobs */
+  .mbf-why-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.38;
+    animation: mbfBlobFloat 8s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+  .mbf-why-blob--1 {
+    width: 480px; height: 480px;
+    background: var(--primary);
+    top: -120px; right: -100px;
+    animation-delay: 0s;
+  }
+  .mbf-why-blob--2 {
+    width: 360px; height: 360px;
+    background: var(--accent);
+    bottom: -80px; left: -80px;
+    animation-delay: 2s;
+  }
+  .mbf-why-blob--3 {
+    width: 260px; height: 260px;
+    background: var(--secondary);
+    top: 50%; left: 40%;
+    animation-delay: 4s;
+  }
+
+  @keyframes mbfBlobFloat {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(30px) scale(1.08); }
+  }
+
+  /* Grid lines overlay */
+  .mbf-why-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,249,245,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,249,245,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Content container */
+  .mbf-why-inner {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    direction: rtl;
+  }
+
+  /* Badge pill */
+  .mbf-why-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,143,161,0.18);
+    border: 1px solid rgba(201,143,161,0.38);
+    border-radius: var(--radius-badge);
+    padding: 8px 22px;
+    color: var(--secondary);
+    font-size: 0.82rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    animation: mbfFadeSlideDown 0.7s cubic-bezier(0.4,0,0.2,1) both;
+  }
+  .mbf-why-badge-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: inline-block;
+    animation: mbfPulse 2s ease-in-out infinite;
+  }
+  @keyframes mbfPulse {
+    0%,100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.4); }
+  }
+
+  /* Heading */
+  .mbf-why-heading {
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    color: var(--text-light);
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+    animation: mbfFadeSlideDown 0.85s 0.1s cubic-bezier(0.4,0,0.2,1) both;
+    position: relative;
+  }
+  .mbf-why-heading-highlight {
+    position: relative;
+    display: inline-block;
+  }
+  .mbf-why-heading-highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    left: 0;
+    height: 6px;
+    background: var(--gradient-primary);
+    border-radius: 4px;
+    opacity: 0.7;
+    animation: mbfUnderlineIn 0.6s 0.9s cubic-bezier(0.4,0,0.2,1) both;
+    transform-origin: right;
+  }
+  @keyframes mbfUnderlineIn {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+
+  /* Divider line */
+  .mbf-why-divider {
+    width: 64px; height: 2px;
+    background: var(--gradient-gold-shine);
+    border-radius: 2px;
+    margin: 28px auto;
+    animation: mbfFadeSlideDown 0.9s 0.2s cubic-bezier(0.4,0,0.2,1) both;
+  }
+
+  /* Paragraph card */
+  .mbf-why-card {
+    position: relative;
+    background: rgba(255,249,245,0.07);
+    border: 1px solid rgba(255,249,245,0.12);
+    border-radius: var(--radius-card);
+    padding: 40px 48px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    max-width: 680px;
+    width: 100%;
+    animation: mbfFadeSlideUp 1s 0.35s cubic-bezier(0.4,0,0.2,1) both;
+    transition: var(--transition-hover);
+    box-shadow: var(--shadow-elevated), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+  .mbf-why-card:hover {
+    background: rgba(255,249,245,0.11);
+    border-color: rgba(201,143,161,0.28);
+    transform: translateY(-4px);
+    box-shadow: 0 28px 60px rgba(63,51,45,0.22), inset 0 1px 0 rgba(255,255,255,0.10);
+  }
+
+  /* Quote mark decoration */
+  .mbf-why-card::before {
+    content: '✦';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 36px; height: 36px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    line-height: 36px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(201,143,161,0.4);
+  }
+
+  .mbf-why-paragraph {
+    font-size: clamp(1.05rem, 2.2vw, 1.22rem);
+    line-height: 1.85;
+    color: rgba(255,249,245,0.88);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  /* Floating corner ornaments */
+  .mbf-why-ornament {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0.18;
+    z-index: 2;
+  }
+  .mbf-why-ornament--tl {
+    top: 28px; right: 28px;
+    width: 80px; height: 80px;
+    border-top: 2px solid var(--secondary);
+    border-right: 2px solid var(--secondary);
+    border-radius: 0 12px 0 0;
+    animation: mbfOrnamentFade 1.2s 0.6s ease both;
+  }
+  .mbf-why-ornament--br {
+    bottom: 36px; left: 28px;
+    width: 80px; height: 80px;
+    border-bottom: 2px solid var(--secondary);
+    border-left: 2px solid var(--secondary);
+    border-radius: 0 0 0 12px;
+    animation: mbfOrnamentFade 1.2s 0.8s ease both;
+  }
+
+  @keyframes mbfFadeSlideDown {
+    from { opacity: 0; transform: translateY(-24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes mbfFadeSlideUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes mbfOrnamentFade {
+    from { opacity: 0; }
+    to { opacity: 0.18; }
+  }
+
+  @media (max-width: 768px) {
+    .mbf-why-section { padding: 100px 0 90px; min-height: auto; }
+    .mbf-why-card { padding: 30px 24px; }
+    .mbf-why-blob--1 { width: 300px; height: 300px; }
+    .mbf-why-blob--2 { width: 240px; height: 240px; }
+    .mbf-why-blob--3 { display: none; }
+    .mbf-why-ornament { display: none; }
+  }
+</style>
+
+<div class="mbf-why-section">
+  <!-- Animated blobs -->
+  <div class="mbf-why-blob mbf-why-blob--1"></div>
+  <div class="mbf-why-blob mbf-why-blob--2"></div>
+  <div class="mbf-why-blob mbf-why-blob--3"></div>
+
+  <!-- Grid overlay -->
+  <div class="mbf-why-grid"></div>
+
+  <!-- Corner ornaments -->
+  <div class="mbf-why-ornament mbf-why-ornament--tl"></div>
+  <div class="mbf-why-ornament mbf-why-ornament--br"></div>
+
+  <!-- Content -->
+  <div class="mbf-why-inner">
+    <div class="mbf-why-badge">
+      <span class="mbf-why-badge-dot"></span>
+      MB Finance — הבחירה הנכונה
     </div>
 
-    
+    <h2 class="mbf-why-heading">
+      למה לבחור ב-<span class="mbf-why-heading-highlight">MB Finance</span>?
+    </h2>
+
+    <div class="mbf-why-divider"></div>
+
+    <div class="mbf-why-card">
+      <p class="mbf-why-paragraph">אני מספקת פתרונות הנהלת חשבונות מקצועיים, אישיים ומדויקים, כדי שתוכלו להתמקד בעסק שלכם בלי דאגות.</p>
+    </div>
   </div>
+</div>
 </section>
 
 
