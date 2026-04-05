@@ -6617,6 +6617,166 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* Added Component Styles */
+/* ===== Gallery Grid Section ===== */
+.gallery-grid-section {
+  background: #faf7f8;
+  padding: 72px 24px;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+}
+
+.gallery-grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== Grid Layout ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 260px;
+  gap: 14px;
+}
+
+/* ===== Span Variants ===== */
+.gallery-item--tall {
+  grid-row: span 2;
+}
+
+.gallery-item--wide {
+  grid-column: span 2;
+}
+
+/* ===== Individual Items ===== */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e8dde1;
+  box-shadow: 0 4px 18px rgba(201, 143, 161, 0.13);
+  transition: box-shadow 0.32s ease, transform 0.32s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  box-shadow: 0 10px 36px rgba(201, 143, 161, 0.30);
+  transform: translateY(-3px) scale(1.01);
+  z-index: 2;
+}
+
+.gallery-item:focus-within {
+  outline: 3px solid var(--primary, #C98FA1);
+  outline-offset: 3px;
+}
+
+/* ===== Images ===== */
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.42s ease, filter 0.42s ease;
+  filter: brightness(0.97) saturate(1.05);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+  filter: brightness(1.04) saturate(1.12);
+}
+
+/* ===== Subtle overlay on hover ===== */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 143, 161, 0.08) 0%,
+    rgba(183, 154, 125, 0.08) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.32s ease;
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+/* ===== Decorative accent border ===== */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  border: 1.5px solid rgba(201, 143, 161, 0.22);
+  z-index: 1;
+  pointer-events: none;
+  transition: border-color 0.32s ease;
+}
+
+.gallery-item:hover::before {
+  border-color: rgba(201, 143, 161, 0.55);
+}
+
+/* ===== Responsive — Tablet ===== */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 220px;
+    gap: 12px;
+  }
+
+  .gallery-item--tall {
+    grid-row: span 2;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+}
+
+/* ===== Responsive — Mobile ===== */
+@media (max-width: 560px) {
+  .gallery-grid-section {
+    padding: 48px 14px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+    gap: 10px;
+  }
+
+  /* Reset span overrides so layout stays balanced on small screens */
+  .gallery-item--tall {
+    grid-row: span 2;
+  }
+
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .gallery-item {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .gallery-item--tall,
+  .gallery-item--wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
