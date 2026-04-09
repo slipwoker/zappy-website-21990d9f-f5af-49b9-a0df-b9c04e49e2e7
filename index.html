@@ -242,6 +242,345 @@
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.index-stats-section {
+  direction: rtl;
+  background-color: #F8F1EA;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6) 0, rgba(255,255,255,0) 42%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.45) 0, rgba(255,255,255,0) 36%),
+    linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(233,222,210,0.18) 100%);
+  color: var(--text-dark);
+  padding: 80px 24px 100px;
+  position: relative;
+  overflow: visible;
+  font-family: 'Heebo', 'Assistant', sans-serif;
+}
+
+/* ── Section Header ── */
+.index-stats-section .stats-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px;
+}
+
+.index-stats-section .stats-eyebrow {
+  display: inline-block;
+  font-family: 'Heebo', 'Assistant', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(184,145,89,0.10);
+  border: 1px solid rgba(184,145,89,0.22);
+  border-radius: 999px;
+  padding: 6px 18px;
+  margin-bottom: 18px;
+}
+
+.index-stats-section .stats-title {
+  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-dark);
+  margin: 0 0 18px;
+  text-align: center;
+}
+
+.index-stats-section .stats-intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+  max-width: none !important;
+}
+
+/* ── Stats Grid ── */
+.index-stats-section .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  direction: rtl;
+}
+
+.index-stats-section .stat-card {
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(142,112,82,0.10);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.index-stats-section .stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary), var(--primary));
+  border-radius: 20px 20px 0 0;
+}
+
+.index-stats-section .stat-card--accent::before {
+  background: linear-gradient(90deg, var(--accent), #D4A76A);
+}
+
+.index-stats-section .stat-card--accent {
+  background: linear-gradient(160deg, #FDF6EE 0%, #F7EDE0 100%);
+}
+
+.index-stats-section .stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(142,112,82,0.14);
+}
+
+.index-stats-section .stat-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(201,143,161,0.10);
+  margin: 0 auto 20px;
+  color: var(--primary);
+}
+
+.index-stats-section .stat-card--accent .stat-icon-wrap {
+  background: rgba(184,145,89,0.12);
+  color: var(--accent);
+}
+
+.index-stats-section .stat-number {
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+}
+
+.index-stats-section .stat-plus,
+.index-stats-section .stat-pct {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--primary);
+  margin-top: 6px;
+}
+
+.index-stats-section .stat-card--accent .stat-pct {
+  color: var(--accent);
+}
+
+.index-stats-section .stat-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.index-stats-section .stat-desc {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Process Section ── */
+.index-stats-section .process-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #FBF6F1 0%, #F2E7DB 100%);
+  border: 1px solid var(--border-light);
+  border-radius: 28px;
+  padding: 56px 48px;
+  box-shadow: 0 8px 24px rgba(142,112,82,0.08);
+}
+
+.index-stats-section .process-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.index-stats-section .process-title {
+  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.index-stats-section .process-subtitle {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+  max-width: none !important;
+}
+
+.index-stats-section .process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  direction: rtl;
+}
+
+.index-stats-section .process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  position: relative;
+}
+
+.index-stats-section .step-number-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+  width: 100%;
+}
+
+.index-stats-section .step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--primary);
+  font-family: 'Fraunces', 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary);
+  box-shadow: 0 4px 14px rgba(201,143,161,0.18);
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.index-stats-section .step-line {
+  position: absolute;
+  top: 28px;
+  inset-inline-end: 0;
+  width: calc(50% - 28px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(201,143,161,0.5), rgba(201,143,161,0.1));
+  z-index: 1;
+}
+
+.index-stats-section .step-content {
+  flex: 1;
+}
+
+.index-stats-section .step-heading {
+  font-family: 'Fraunces', 'Cormorant Garamond', 'David Libre', 'Noto Serif Hebrew', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.index-stats-section .step-text {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  text-align: center;
+  max-width: none !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .index-stats-section .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .index-stats-section .process-steps {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .index-stats-section .step-line {
+    display: none;
+  }
+
+  .index-stats-section .process-wrap {
+    padding: 40px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .index-stats-section {
+    padding: 60px 16px 72px;
+  }
+
+  .index-stats-section .stats-header {
+    margin-bottom: 40px;
+  }
+
+  .index-stats-section .stats-title {
+    font-size: 1.6rem;
+  }
+
+  .index-stats-section .stats-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+
+  .index-stats-section .stat-card {
+    padding: 28px 20px 24px;
+  }
+
+  .index-stats-section .stat-number {
+    font-size: 2.4rem;
+  }
+
+  .index-stats-section .process-wrap {
+    padding: 32px 20px;
+    border-radius: 20px;
+  }
+
+  .index-stats-section .process-steps {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  .index-stats-section .step-line {
+    display: none;
+  }
+
+  .index-stats-section .process-step {
+    padding: 0 8px;
+  }
+}
+</style>
     <link rel="stylesheet" href="/styles.css">
 
     <style id="zappy-dropdown-submenu-styles">
@@ -1439,95 +1778,94 @@
 
 
 
-<section id="stats" class="index-stats-section" data-layout-spec="בית-stats" dir="rtl">
-  <div class="index-stats-container">
+<section class="index-stats-section" data-layout-spec="בית-stats" dir="rtl" data-zappy-section="true" id="stats">
 
-    <!-- Header -->
-    <div class="index-stats-header">
-      <h2 class="index-stats-title">מספרים שמדברים בשבילי</h2>
-      <p class="index-stats-subtitle">אני לא מוכרת שירות — אני יוצרת סדר פיננסי, שליטה ושקט נפשי. הנה מה שאני מביאה לכל לקוח שבוחר לעבוד איתי.</p>
-    </div>
-
-    <!-- Trust Blocks Row -->
-    <div class="index-stats-grid">
-      <div class="index-stats-card">
-        <span class="index-stats-number">3</span>
-        <span class="index-stats-label">רמות היקף פעילות</span>
-        <p class="index-stats-desc">מ־0 עד 300 תנועות — כל עסק מקבל מסגרת שמתאימה בדיוק לו.</p>
-      </div>
-      <div class="index-stats-card">
-        <span class="index-stats-number">8</span>
-        <span class="index-stats-label">תחומי שירות</span>
-        <p class="index-stats-desc">מהנהלת חשבונות שוטפת ועד דיווחים לרשויות המס — הכל תחת קורת גג אחת.</p>
-      </div>
-      <div class="index-stats-card">
-        <span class="index-stats-number">1</span>
-        <span class="index-stats-label">נקודת קשר אישית</span>
-        <p class="index-stats-desc">אני — מעיין — זמינה לך ישירות. ללא מוקד, ללא ביורוקרטיה, ללא אנונימיות.</p>
-      </div>
-      <div class="index-stats-card">
-        <span class="index-stats-number">∞</span>
-        <span class="index-stats-label">בהירות חודשית מתמשכת</span>
-        <p class="index-stats-desc">בכל חודש אתה יודע בדיוק איפה העסק עומד — ללא הפתעות, ללא חוסר ודאות.</p>
-      </div>
-    </div>
-
-    <!-- Process Strip -->
-    <div class="index-stats-process">
-      <div class="index-stats-process-header">
-        <h3 class="index-stats-process-title">איך אנחנו עובדים יחד?</h3>
-        <p class="index-stats-process-sub">שלושה שלבים פשוטים — מהיכרות ראשונה ועד לשקט פיננסי מתמשך.</p>
-      </div>
-      <div class="index-stats-steps">
-        <div class="index-stats-step">
-          <div class="index-stats-step-marker">
-            <span class="index-stats-step-num">01</span>
-          </div>
-          <div class="index-stats-step-content">
-            <h4 class="index-stats-step-title">אני בוחנת</h4>
-            <p class="index-stats-step-desc">אנחנו נפגשים, אני מקשיבה ומבינה את מצב העסק, הספרים, והצרכים הפיננסיים שלך — ללא שיפוטיות, עם הרבה סבלנות.</p>
-          </div>
-        </div>
-        <div class="index-stats-step-divider" aria-hidden="true">
-          <svg width="32" height="2" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg" data-no-icon-edit="true" aria-hidden="true">
-            <line x1="0" y1="1" x2="32" y2="1" stroke="#B89159" stroke-width="1.5" stroke-dasharray="4 3"></line>
-          </svg>
-        </div>
-        <div class="index-stats-step">
-          <div class="index-stats-step-marker">
-            <span class="index-stats-step-num">02</span>
-          </div>
-          <div class="index-stats-step-content">
-            <h4 class="index-stats-step-title">אני מסדרת</h4>
-            <p class="index-stats-step-desc">אני מארגנת את הכרטסות, מיישרת את הספרים, ומבנה מחדש את התמונה הפיננסית — בצורה ברורה, מסודרת ומדויקת.</p>
-          </div>
-        </div>
-        <div class="index-stats-step-divider" aria-hidden="true">
-          <svg width="32" height="2" viewBox="0 0 32 2" fill="none" xmlns="http://www.w3.org/2000/svg" data-no-icon-edit="true" aria-hidden="true">
-            <line x1="0" y1="1" x2="32" y2="1" stroke="#B89159" stroke-width="1.5" stroke-dasharray="4 3"></line>
-          </svg>
-        </div>
-        <div class="index-stats-step">
-          <div class="index-stats-step-marker">
-            <span class="index-stats-step-num">03</span>
-          </div>
-          <div class="index-stats-step-content">
-            <h4 class="index-stats-step-title">אני מייצבת</h4>
-            <p class="index-stats-step-desc">מכאן אנחנו עובדים בקצב שוטף ורגוע — דיווחים בזמן, התאמות בנק, ושקט נפשי אמיתי מדי חודש.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <!-- Section Header -->
+  <div class="stats-header">
+    <span class="stats-eyebrow">התוצאות מדברות בעד עצמן</span>
+    <h2 class="stats-title">מספרים שמדברים בשבילי</h2>
+    <p class="stats-intro">אני לא מוכרת שירות — אני יוצרת סדר פיננסי, שליטה ושקט נפשי. הנה מה שאני מביאה לכל לקוח שבוחר לעבוד איתי.</p>
   </div>
 
-  <!-- Bottom Divider: large rounded upward cut-out revealing light CTA below -->
-  <div class="index-stats-divider-wrapper" aria-hidden="true">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- Gold outline arc -->
-      <path d="M0,100 L0,72 Q600,-20 1200,72 L1200,100 Z" fill="#F9F6F2"></path>
-      <path d="M0,72 Q600,-20 1200,72" fill="#F9F6F2" stroke="#B89159" stroke-width="1.2" opacity="0.7"></path>
-    </svg>
+  <!-- Stats Grid -->
+  <div class="stats-grid">
+    <article class="stat-card">
+      <div class="stat-icon-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      </div>
+      <div class="stat-number">300<span class="stat-plus">+</span></div>
+      <div class="stat-label">רמות היקף פעילות</div>
+      <p class="stat-desc">מ־0 עד 300 תנועות — כל עסק מקבל מסגרת שמתאימה בדיוק לו.</p>
+    </article>
+
+    <article class="stat-card stat-card--accent">
+      <div class="stat-icon-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+      </div>
+      <div class="stat-number">100<span class="stat-pct">%</span></div>
+      <div class="stat-label">תחומי שירות</div>
+      <p class="stat-desc">מהנהלת חשבונות שוטפת ועד דיווחים לרשויות המס — הכל תחת קורת גג אחת.</p>
+    </article>
+
+    <article class="stat-card">
+      <div class="stat-icon-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </div>
+      <div class="stat-number">1</div>
+      <div class="stat-label">נקודת קשר אישית</div>
+      <p class="stat-desc">אני — מעיין — זמינה לך ישירות. ללא מוקד, ללא ביורוקרטיה, ללא אנונימיות.</p>
+    </article>
+
+    <article class="stat-card">
+      <div class="stat-icon-wrap">
+        <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      </div>
+      <div class="stat-number">12</div>
+      <div class="stat-label">בהירות חודשית מתמשכת</div>
+      <p class="stat-desc">בכל חודש אתה יודע בדיוק איפה העסק עומד — ללא הפתעות, ללא חוסר ודאות.</p>
+    </article>
+  </div>
+
+  <!-- Process Section -->
+  <div class="process-wrap">
+    <div class="process-header">
+      <h3 class="process-title">איך אנחנו עובדים יחד?</h3>
+      <p class="process-subtitle">שלושה שלבים פשוטים — מהיכרות ראשונה ועד לשקט פיננסי מתמשך.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number-wrap">
+          <span class="step-number">01</span>
+          <div class="step-line" aria-hidden="true"></div>
+        </div>
+        <div class="step-content">
+          <h4 class="step-heading">אני בוחנת</h4>
+          <p class="step-text">אנחנו נפגשים, אני מקשיבה ומבינה את מצב העסק, הספרים, והצרכים הפיננסיים שלך — ללא שיפוטיות, עם הרבה סבלנות.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number-wrap">
+          <span class="step-number">02</span>
+          <div class="step-line" aria-hidden="true"></div>
+        </div>
+        <div class="step-content">
+          <h4 class="step-heading">אני מסדרת</h4>
+          <p class="step-text">אני מארגנת את הכרטסות, מיישרת את הספרים, ומבנה מחדש את התמונה הפיננסית — בצורה ברורה, מסודרת ומדויקת.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="step-number-wrap">
+          <span class="step-number">03</span>
+        </div>
+        <div class="step-content">
+          <h4 class="step-heading">אני מייצבת</h4>
+          <p class="step-text">מכאן אנחנו עובדים בקצב שוטף ורגוע — דיווחים בזמן, התאמות בנק, ושקט נפשי אמיתי מדי חודש.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
 </section>
